@@ -1,0 +1,40 @@
+
+// Using this instead of the plugin import in order to pull the dev branch due
+// to this: https://github.com/openbakery/gradle-xcodePlugin/issues/275
+//
+// Once version 0.14 is released we should restore the plugin syntax:
+/*
+plugins {
+  id "org.openbakery.xcode-plugin" version "0.14.0"
+}
+*/
+buildscript {
+  repositories {
+    maven {
+      url('http://repository.openbakery.org/')
+    }
+    mavenCentral()
+  }
+
+  dependencies {
+    classpath "org.openbakery:xcode-plugin:0.14.0.develop+"
+  }
+}
+
+apply plugin: "org.openbakery.xcode-plugin"
+
+xcodebuild {
+  projectFile = 'GradleXcodeIssueDemo/GradleXcodeIssueDemo.xcodeproj'
+
+  scheme = 'GradleXcodeIssueDemo'
+  target = 'GradleXcodeIssueDemo'
+
+  type = 'iOS'
+
+  simulator = 'true'
+  destination {
+    platform = 'iOS Simulator'
+    name = 'iPhone 6'
+    os = '9.3'
+  }
+}
