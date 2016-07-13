@@ -1,0 +1,29 @@
+:xcodebuildConfig
+:infoplistModify
+:xcodebuild FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':xcodebuild'.
+> Command failed to run (exit code 66): 'xcodebuild -scheme GradleXcodeIssueDemo -configuration Debug -derivedDataPath /Users/me/path/to/repo/GradleXcodeIssueDemo/build/derivedData DSTROOT=/Users/me/path/to/repo/GradleXcodeIssueDemo/build/dst OBJROOT=/Users/me/path/to/repo/GradleXcodeIssueDemo/build/obj SYMROOT=/Users/me/path/to/repo/GradleXcodeIssueDemo/build/sym SHARED_PRECOMPS_DIR=/Users/me/path/to/repo/GradleXcodeIssueDemo/build/shared -destination platform=iOS Simulator,id=986DBE9C-6BFC-4B39-8B8A-811C7016A20F'
+  Tail of output:
+  2016-07-13 13:12:39.049 xcodebuild[91962:2003133] [MT] PluginLoading: Required plug-in compatibility UUID ACA8656B-FEA8-4B6D-8E4A-93F4C95C362C for plug-in at path '~/Library/Application Support/Developer/Shared/Xcode/Plug-ins/XVim.xcplugin' not present in DVTPlugInCompatibilityUUIDs
+  User defaults from command line:
+      IDEDerivedDataPathOverride = /Users/me/path/to/repo/GradleXcodeIssueDemo/build/derivedData
+  
+  Build settings from command line:
+      DSTROOT = /Users/me/path/to/repo/GradleXcodeIssueDemo/build/dst
+      OBJROOT = /Users/me/path/to/repo/GradleXcodeIssueDemo/build/obj
+      SHARED_PRECOMPS_DIR = /Users/me/path/to/repo/GradleXcodeIssueDemo/build/shared
+      SYMROOT = /Users/me/path/to/repo/GradleXcodeIssueDemo/build/sym
+  
+  xcodebuild: error: The directory /Users/me/path/to/repo/GradleXcodeIssueDemo does not contain an Xcode project or workspace.
+
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.
+
+BUILD FAILED
+
+Total time: 3.338 secs
