@@ -1,0 +1,6 @@
+// Include plugin project via relative local to create a composite build
+includeBuild '../gradle-xcodePlugin', {
+    dependencySubstitution {
+        substitute module('org.openbakery:xcode-plugin') with project(':plugin')
+    }
+}
