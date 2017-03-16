@@ -35,6 +35,6 @@ xcodebuild {
   destination {
     platform = 'iOS Simulator'
     name = 'iPhone 6'
-    os = '9.3'
+//    os = '10.2'
   }
 }
