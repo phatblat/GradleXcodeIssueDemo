@@ -1,5 +1,9 @@
 This is a dummy project demonstrating a possible issue in [gradle-xcodePlugin](https://github.com/openbakery/gradle-xcodePlugin).
 
+:warning: Note that the [`settings.gradle`](settings.gradle) in this branch creates a composite build with
+the gradle-xcodePlugin residing in a sibling directory to this project. This can be updated or disabled
+by editing `settings.gradle`.
+
 ## The Issue
 
 My theory is that the plugin is not supporting running `xcodebuild` for projects located in a subfolder rather than in the current directory.
